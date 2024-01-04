@@ -1,0 +1,189 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-simple&code=DYUwLgBAngJghmOEC8EDaByQjUGGR8w8EYYA0EGgNXKDmSkSYB9ugDxpUaBnnoCqBDgI3mChFgcRoFGxlPQNYxlALoBuALAAoUJAAe8RCnQBmABwAmAGzEALLoDsBvVq0AGPQE4zK4gFYVZu_YNrLxI7pXjpAewAOYACWvgB2ygDe0hAQYL6-wMH-AFwQUVIxMWAATkEA5nkg2akARHByQQDOJYTREAC-tRkQebkwqemZEKAAZmClamY1dTG5eQAW_RAlGkNNXQBGvmBxALals8PNWQEbcyMQAMZhiEGhADJwCyDAqT1wwJUg8w0vcgCCFZUdB2BQ_iBSgA3B4AVxAWy6lXGvgA7ncHk8Xo06lBPlUfttYv9AdNDggQHlfNkoJDMoo4KlYAg4C8YuUquczrjOl0INC4QjHs8DiisQzKgAVIKHADWmLZ7Jh8Ig925dNeBwFl2utzSBxiqzg2TyZ1SBgsGogsKCMDA41S5gV9OA-VCpV6YDJXV8QKKPWAnOmOVBoXxYAh1tlxK1KyKd19h2CYQgAAoQcBwcQzjAQHIAJTqrFdWQQFPKFNpiAAaggAEZJNnMkEenH88hUNTEAA6UChPLmzOsyWjcCg7LhEoRMIgAA-JRLcabcFbIHb5ogAFo86FUxnJyV6mk4OPJwnwRv6iVKz2GhAbk887XY_nS2WUI2KbP5-Mu0autk-wPphEwLDfLupaxtOz4duMS4rmumalpuaQLIBED7iAh7Hu-Z4XshNZ1quk4aA-0BPm2YFvlWH5fuEsZoV0Q7mp-Y4TkBIFEQuy6FuuMFbhEhwIUhKFURA6Ynj29RoVhwGEXOYEQWxEAAHwQJYJGnr2YD9hR_ExEOPRBG6CHiTSoEsZBabQdMnEwDxYLIRxJT8YJaEiaRECfqp35ab4_Z6UxklGWxpmwREFkMYhVkoUJXR8pKuSHBaWanpScXKccnrFNMADEdiWIclg9JYzo9j0JwAMpBAAXriZa2PxhWhGAADqID5JMyQYEswCptkGAOUGMQLBKSUJMSpQZVlOV5T1mQ1WAJXlaklUTTEU0NU1_StQkHVdU5kU9oc_WnslQ3pZl2W5flkpTTNFVVU5i0nMtEyrW1G3dWh7SJftg2pSUI0neN1XFWVV0TdtkoAPSgxAgA03oAAHKALAqaEjntPYLHAYqtB5q4AMKfcNACiahaLodgaGdbIHV9sLjEEAak10JpmrFZYaAtEDjI1D1zTo_H-HAMAwGceSpGgZbEBYEBi3YIgs0s2QdQASrzQSgt85aGjdwa1Zdc0iy9Tng1DgAxcvDTl_r4SOSijaPZBjMDYylw0AGIO5YahE7TmTk6UlPU4G_H0-ac3M_xbMrZzLM83zAtCyL4ui_YUv8TL8uK8rc1q8pGvTYD2vAxN-uQ4AkHLG6etEgCyieo6K6O-rbOPpQ7WgAEIACJllo7sxJ70zezTLP-4zQfqyHHPllz6sR_z7bR3HscQJL0vEsn_Op6rLMXdn5Y61tecQ9DgCy8oADqZoYV_bm2yltV9bNd24dJQ6ijsYWE_hBmM2ZZ2OmHdHHXJQ9776v90DizYezVR7h15pPQW6AY5iwlgndWScigK2XirMs6dlLr1mpvXOaF9aABI5Q-x8dLlwQZXauWMf73zgI_F-tDX7v0_izLuv8qa9z9qaAOYDg7s1AW3cBkcp7QJnmLMs8CM6IOyMgpWqD0GnkwRVLep4QaZGUdtbaTxcggBVmgbs2IASlBRtkfKHJYSNzIVfVcqQfQ8ixMAK4Nwz4mKsdkJMRp_C-EqNTEI9pphjEmKTZhVCaHP1fkTRhRolo8MeutIom0IoKkMXVDhsUNDOAOD7VYRU_igDPswjKjc1BOz-liZRFJUgKBpMiYg8D6hiCAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    let ydata = ['花鼓戏', '京剧', '相声', '秦腔', '黄梅戏', '越剧', '豫剧'];
+let xdata = [3826, 4477, 4660, 4903, 5305, 5789, 7743];
+option = {
+  tooltip: {
+    trigger: "axis",
+  },
+  grid: {
+    left: "80",
+    right: "20",
+    bottom: "20",
+    top: "20",
+    containLabel: false,
+  },
+  xAxis: {
+    type: "value",
+    show: false,
+  },
+  yAxis: {
+    type: "category",
+    data: ydata,
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLabel: {
+      margin: 70,
+      width: 60,
+      align: "left",
+      overflow: "truncate",
+      formatter: function (value, index) {
+        let ind = index + 1;
+        if (ind == ydata.length) {
+          return "{one|" + (ydata.length - index) + "} {a|" + value + "}";
+        } else if (ind + 1 == ydata.length) {
+          return "{two|" + (ydata.length - index) + "} {b|" + value + "}";
+        } else if (ind + 2 == ydata.length) {
+          return (
+            "{three|" + (ydata.length - index) + "} {c|" + value + "}"
+          );
+        }
+        if (ydata.length - index > 9) {
+          return (
+            "{five|" + (ydata.length - index) + "} {d|" + value + "}"
+          );
+        }
+        return "{four|" + (ydata.length - index) + "} {d|" + value + "}";
+      },
+      rich: {
+        a: {
+          color: "#59c9f9",
+          fontSize: 13,
+          fontWeight:'bolder'
+        },
+        b: {
+          color: "#59c9f9",
+          fontSize: 13,
+          fontWeight:'bolder'
+        },
+        c: {
+          color: "#59c9f9",
+          fontSize: 13,
+          fontWeight:'bolder'
+        },
+        d: {
+          color: "#59c9f9",
+          fontSize: 13,
+        },
+        // 第一名
+        one: {
+          backgroundColor: "#E86452",
+          color: "white",
+          width: 12,
+          height: 16,
+          padding: [1, 0, 0, 5],
+          borderRadius: 10,
+          fontSize: 11,
+        },
+        // 第二名
+        two: {
+          backgroundColor: "#FF9845",
+          color: "white",
+          width: 12,
+          height: 16,
+          padding: [1, 0, 0, 5],
+          borderRadius: 10,
+          fontSize: 11,
+        },
+        // 第三名
+        three: {
+          backgroundColor: "#F6BD16",
+          color: "white",
+          width: 12,
+          height: 16,
+          padding: [1, 0, 0, 5],
+          borderRadius: 10,
+          fontSize: 11,
+        },
+        // 一位数
+        four: {
+          backgroundColor: "rgba(0,0,0,0.15)",
+          color: "white",
+          width: 12,
+          height: 16,
+          padding: [1, 0, 0, 5],
+          borderRadius: 10,
+          fontSize: 11,
+        },
+        // 两位数
+        five: {
+          backgroundColor: "rgba(0,0,0,0.15)",
+          color: "white",
+          width: 16,
+          height: 16,
+          padding: [1, 0, 0, 1],
+          borderRadius: 10,
+          fontSize: 11,
+        },
+      },
+    },
+  },
+  series: [{
+    type: "bar",
+    showBackground: true,
+    label: {
+      show: true,
+      position: "right",
+      color: "rgba(0,0,0,0.45)",
+      fontWeight:'bolder'
+    },
+    barWidth: 25,
+    itemStyle: {
+      color: "#5B8FF9",
+    },
+    data: xdata,
+  }, ],
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-simple&code=GYVwdgxgLglg9mABAEwE4EMDuBhAFu1KACmXSnQEpEBvAWAChEnEIEBnKRKVAUx4Ft0ABwDyQ2AkQBeGg2aI2PVDB5sAXIgDac-bMa6mUAJ5CeGgOTc-goeYA0Og-jAxBEsABEQGdwFUhpFBmiACMAAwRDvoGqHDo_BrA6AA2ilEGTGBwyDzYyTAQANYa4DnAMGA8yOkZgegadQB0ELgwyWg8YDUG4DAAbkpsKQAqGGBsMO4a3CA83brJ6ABGPMkadNEZbLhwmNOos_MGwAhQAMowAF7BIQDsjroAvkfMAPSviEu86MgQB_xLdYPeTvZjbXb7WbAt4fR7QpjQuGbAC6OkeAG4GDpWONOGxwEtvBwxO5pHp5IplKoNNpNkwNhkuCZguZ8WBCagOPZ4YgMMgYCB1FpzAAmMIAUnsiHMAE4JeZkS8mM5XGR4J5vGqEP5AjcImElYgsjk8gViohSjxypVqjy6g0yOhmq12rwujzegNOSMxhMplwDnMeZMBGdjMlggzGZ84KgcqgAOowZBQXAaEKGphLWPx7BwZKxiyoADmS3QRBFAFZK3YqzW63ZGpWKOYec8eYsVmtydHwXsA4ceUwTmBzlcbvc6cwkQYZ8xUfoMVj9BHOBBvG6oCT1WSrAJhNuEJj9PwjHgCFBGoot-J1UR16hN4ewBRjzprwBJUdKPopIigSBSSIKgoyYB8n1vSQpGhcDOhvUkpEQgNrAPSCkAAfgUAkiXgnd9hQ0Q0OPeRT3PQgrx4XCEHvDc4OfV80TsRAAGZ9QY-gkQYUFAH95QAKV0AaPlAAVtBgcQ4RAjDgbwPEdMkozAeIWR4FoLzYbl9BaNoOjAGkHlAjJ5P4FkqxCNTo0QX9klmDRjMzFgXS0nSpwMPSzIMllAEQbQAX1MAcNNADNtUyzOYCyrMQGyh10cKmHbJz5zbTMXN0NyLEQAAWZiTNs4LgjSjNwo011OkcwKe2KpLpUAAnlAH2_QBn9MABTkAuKrKNByyLEGisyF0ZdqMlakr9IUixmMrAA2BqMialiRts_KHK0VqEsZMrzCqwA8IMACTixrMiahuG1rusZTqMn23QFuYJaUtuZjNt0CaLuY6b7LdIrAtOgwlqqwB4I0AcyVrsZW7Lr22zDtnQ1XqNAbpRFEIrsylIQqh-68sewq5pi-QwfkJbACezQAvIN-8a4eCBHAfC4GnlB8LzrufGmFuu4Hs0p7UeKjGzoh5bKsAOP9AHpzGmbsJ5q7hJtHEDJ-RjvRyn2ZCYbRthyybllhmCu05mXt68HDIsKrAGV5QAmgMAQAZAA47AAdMAccAODlACFzQAAozNvn5AmmXdpFqKgbinkwaW4aRRlPmJp9mVldm2kWY197KptvHbMdgXEED4WOo9kWvelgAOEV_bjkIM-DpnQ_V122a1irKsAbmVAHtgh2guzjPE-jMXpwpkXzplTP5ZClK27zlGC7M1nMnZ9zAHX5avabjruRXrg7k50Bcl3oNAsDI4gJKkx1XyAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    
+
+function drawChart(data) {
+    const treemapOption = {
+    series: [
+      {
+        type: 'treemap',
+        animationDurationUpdate: 1000,
+        roam: false,
+        nodeClick: undefined,
+        data: data.children,
+        universalTransition: true,
+        label: {
+          show: true,
+          fontSize: 17
+        },
+        // breadcrumb: {
+        //   show: true
+        // }
+        
+      }
+    ]
+  };
+
+  const sunburstOption = {
+    series: [
+      {
+        type: 'sunburst',
+        radius: ['20%', '90%'],
+        animationDurationUpdate: 1000,
+        nodeClick: undefined,
+        data: data.children,
+        universalTransition: true,
+        itemStyle: {
+          borderWidth: 1,
+          borderColor: 'rgba(255,255,255,.5)'
+        },
+        label: {
+          show: true,
+          fontSize: 17
+        }
+      }
+    ]
+  };
+
+  let currentOption = treemapOption;
+  myChart.setOption(currentOption);
+
+  setInterval(function () {
+    currentOption =
+      currentOption === treemapOption ? sunburstOption : treemapOption;
+    myChart.setOption(currentOption);
+  }, 3000);
+}
+
+// 使用例子
+const yourData = {
+  name: 'echarts',
+  children: [
+    {
+          name: '251',
+          value: 251,
+          children: [
+            {
+              name: '民间文学',
+              value: 251,
+              
+            },
+          ]
+        },
+         {
+          name: ' 431',
+          value: 431,
+          children: [
+            {
+              name: '传统音乐',
+              value: 431
+            },
+          ]
+        },
+        
+             {
+          name: '356',
+          value: 356,
+          children: [
+            {
+              name: '传统舞蹈',
+              value: 356
+            },
+          ]
+        },
+        {
+          name: '473',
+          value: 473,
+          children: [
+            {
+              name: '传统戏剧',
+              value: 473
+            },
+          ]
+        },
+        {
+          name: '213',
+          value: 213,
+          children: [
+            {
+              name: '曲艺',
+              value: 213
+            },
+          ]
+        },
+        {
+          name: '417',
+          value: 417,
+          children: [
+            {
+              name: '传统美术',
+              value: 417
+            },
+          ]
+        },
+        {
+          name: '166',
+          value: 166,
+          children: [
+            {
+              name: '传统体育、游\n艺与杂技\n',
+              value: 166
+            },
+          ]
+        },
+        {
+          name: '629',
+          value: 629,
+          children: [
+            {
+              name: '传统技艺',
+              value: 629
+            },
+          ]
+        },
+          {
+          name: '182',
+          value: 182,
+          children: [
+            {
+              name: '传统医药',
+              value: 182
+            },
+          ]
+        },
+        {
+          name: '492',
+          value: 492,
+          children: [
+            {
+              name: '民俗',
+              value: 492
+            },
+          ]
+        },
+
+  ]
+};
+drawChart(yourData);
+
+
+
+
+
+
+
+
+
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
